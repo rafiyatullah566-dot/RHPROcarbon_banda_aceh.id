@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RHPROcarbon Banda Aceh</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#030811;color:#eaf7ff}:root{--b:#00aaff;--b2:#006eff}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;padding:17px 7%;display:flex;justify-content:space-between;background:#030811e8;border-bottom:1px solid #00aaff33}.logo{font-weight:900}.logo span{color:var(--b)}nav a{color:#cdeeff;text-decoration:none;margin-left:20px;font-weight:bold;font-size:14px}
+.hero{min-height:88vh;display:grid;place-items:center;text-align:center;padding:110px 7% 60px;background:radial-gradient(circle at 80% 20%,#004a7d 0,#030811 40%)}.badge{display:inline-block;border:1px solid #00aaff66;border-radius:30px;padding:8px 14px;color:#8fddff;font-size:12px;letter-spacing:2px}.hero h1{font-size:clamp(48px,8vw,90px);line-height:.95;margin:18px 0}.hero h1 span{color:var(--b)}.hero p{max-width:650px;margin:20px auto;color:#9db7c9;line-height:1.7}
+.btn{display:inline-block;border:0;border-radius:9px;padding:13px 20px;background:linear-gradient(135deg,var(--b),var(--b2));color:#fff;font-weight:900;cursor:pointer;text-decoration:none}.alt{background:transparent;border:1px solid #00aaff66;margin-left:8px}
+section{padding:80px 7%}.title{text-align:center;margin-bottom:30px}.title h2{font-size:36px}.title p{color:#7893a7}.box,.adminbox{max-width:950px;margin:auto;background:linear-gradient(145deg,#0b1828,#050c16);border:1px solid #00aaff2b;border-radius:17px;padding:25px}
+.card{max-width:500px;margin:auto;text-align:center;background:#091523;border:1px solid #00aaff33;border-radius:17px;padding:30px}.icon{font-size:35px}.card p{color:#91aabd;line-height:1.6}
+.form,.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.full{grid-column:1/-1}label{font-size:12px;color:#9fc6dc;display:block;margin-bottom:7px}input,textarea{width:100%;padding:13px;background:#06101b;color:#fff;border:1px solid #17344b;border-radius:8px}textarea{min-height:90px;resize:vertical}
+.choice{display:flex;gap:12px}.choice label{flex:1;border:1px solid #17415d;border-radius:12px;padding:17px;cursor:pointer}.choice input{width:auto}.choice strong,.choice small{display:block}.choice small{color:#91aabd;line-height:1.5;margin-top:6px}
+.social{text-align:center}.social a{display:inline-block;color:#bfe9ff;border:1px solid #00aaff33;border-radius:9px;padding:12px 17px;margin:6px;text-decoration:none}footer{text-align:center;color:#668093;border-top:1px solid #00aaff22;padding:30px}
+#login{display:none;position:fixed;inset:0;z-index:50;background:#000c;place-items:center;padding:20px}.login{width:min(410px,100%);background:#07111e;border:1px solid #00aaff55;border-radius:16px;padding:25px}.login input{margin:12px 0}.error{color:#ff6688;font-size:13px;min-height:18px}.admin{display:none;min-height:100vh;padding:110px 7% 50px}.small{color:#7893a7;font-size:12px;line-height:1.5}.status{color:#7fd8ff}
+@media(max-width:700px){nav .links{display:none}.form,.choice,.grid{display:grid;grid-template-columns:1fr}.full{grid-column:auto}.alt{margin:10px 0 0}}
+</style></head>
+<body>
+<div id="public">
+<nav><div class="logo">RH<span>PRO</span>carbon</div><div class="links"><a href="#booking">Booking</a><a href="#sosial">Sosial</a><a href="#" onclick="openLogin();return false">Admin</a></div></nav>
+<header class="hero"><div><div class="badge">BANDA ACEH • CARBON SPECIALIST</div><h1 id="heroName">RHPRO<span>carbon</span><br>Banda Aceh</h1><p id="heroDesc">Custom part dengan tampilan racing, rapi, clean, dan sporty.</p><a class="btn" href="#booking">BOOKING SEKARANG</a><a class="btn alt" href="#sosial">MEDIA SOSIAL</a></div></header>
+<section><div class="title"><h2>Layanan</h2><p>Satu layanan utama RHPROcarbon.</p></div><div class="card"><div class="icon">🛠️</div><h3>Custom Part</h3><p>Custom bagian kendaraan sesuai kebutuhan dengan hasil yang rapi, clean, dan sporty.</p></div></section>
+<section id="booking"><div class="title"><h2>Booking Custom Part</h2><p>Detail booking akan langsung dibuka di WhatsApp.</p></div>
+<div class="box"><form id="bookingForm" class="form">
+<div class="full"><label>Pilihan Booking</label><div class="choice">
+<label><input type="radio" name="type" value="pribadi" checked> <strong>CO + Barang Pribadi</strong><small>Barang pribadi diantarkan sesuai arahan admin.</small></label>
+<label><input type="radio" name="type" value="toko"> <strong>CO + Barang dari Toko</strong><small>Barang tersedia dari toko dan harga booking sudah termasuk harga barang.</small></label></div></div>
+<div><label>Nama</label><input id="name" required></div><div><label>No. WhatsApp</label><input id="phone" required></div>
+<div><label>Tanggal</label><input id="date" type="date" required></div><div><label>Jam</label><input id="time" type="time" required></div>
+<div><label>Jenis Kendaraan</label><input id="vehicle"></div><div><label>Barang / Bagian</label><input id="item"></div>
+<div class="full"><label>Catatan</label><textarea id="notes"></textarea></div>
+<div class="full"><button class="btn" type="submit">KIRIM BOOKING KE WHATSAPP</button></div></form></div></section>
+<section id="sosial"><div class="title"><h2>Media Sosial</h2><p>Hubungi RHPROcarbon Banda Aceh.</p></div><div class="social"><a id="ig" target="_blank">Instagram</a><a id="tt" target="_blank">TikTok</a><a id="fb" target="_blank">Facebook</a><a id="wa" target="_blank">WhatsApp</a></div></section>
+<footer>© 2026 RHPROcarbon Banda Aceh</footer></div>
+
+<div id="login"><div class="login"><h2>🔐 Admin Login</h2><p class="small">Masukkan password admin.</p><input id="password" type="password" placeholder="Password admin"><button class="btn" style="width:100%" onclick="login()">MASUK</button><p id="error" class="error"></p><button onclick="closeLogin()" style="background:none;border:0;color:#7893a7;cursor:pointer">Batal</button></div></div>
+
+<div id="admin" class="admin"><div class="adminbox"><h1>RHPROcarbon Admin</h1><p class="small">Perubahan disimpan di browser perangkat ini. GitHub Pages tidak memiliki database, jadi perubahan tidak otomatis menjadi perubahan global untuk pengunjung lain.</p>
+<div class="grid"><div><label>Nama Website</label><input id="aName"></div><div><label>Deskripsi</label><input id="aDesc"></div><div><label>Instagram</label><input id="aIg"></div><div><label>TikTok</label><input id="aTt"></div><div><label>Facebook</label><input id="aFb"></div><div><label>Nomor WhatsApp</label><input id="aWa"></div></div>
+<button class="btn" style="margin-top:15px" onclick="saveSettings()">SIMPAN PERUBAHAN</button><button class="btn alt" onclick="showPublic()">LIHAT WEBSITE</button><p id="status" class="status"></p></div></div>
+
+<script>
+const DEFAULT={name:"RHPROcarbon Banda Aceh",desc:"Custom part dengan tampilan racing, rapi, clean, dan sporty.",ig:"https://instagram.com/",tt:"https://tiktok.com/",fb:"https://facebook.com/",wa:"6289529047351"};
+const ADMIN_PASSWORD="usahajaya";let settings={...DEFAULT};
+function loadSettings(){try{const x=JSON.parse(localStorage.getItem("rhpro_settings"));if(x)settings={...DEFAULT,...x}}catch(e){}}
+function applySettings(){document.title=settings.name;document.getElementById("heroName").innerHTML=settings.name.replace(/RHPROcarbon/i,'RHPRO<span>carbon</span>').replace(/Banda Aceh/i,'<br>Banda Aceh');document.getElementById("heroDesc").textContent=settings.desc;ig.href=settings.ig||"#";tt.href=settings.tt||"#";fb.href=settings.fb||"#";wa.href="https://wa.me/"+String(settings.wa).replace(/\D/g,"")}
+function openLogin(){login.style.display="grid";password.value="";error.textContent="";setTimeout(()=>password.focus(),50)}function closeLogin(){login.style.display="none"}
+function login(){if(password.value===ADMIN_PASSWORD){closeLogin();public.style.display="none";admin.style.display="block";aName.value=settings.name;aDesc.value=settings.desc;aIg.value=settings.ig;aTt.value=settings.tt;aFb.value=settings.fb;aWa.value=settings.wa}else{error.textContent="Password salah.";password.value="";password.focus()}}
+password.addEventListener("keydown",e=>{if(e.key==="Enter")login()});
+function saveSettings(){settings={name:aName.value.trim()||DEFAULT.name,desc:aDesc.value.trim()||DEFAULT.desc,ig:aIg.value.trim()||DEFAULT.ig,tt:aTt.value.trim()||DEFAULT.tt,fb:aFb.value.trim()||DEFAULT.fb,wa:aWa.value.trim()||DEFAULT.wa};localStorage.setItem("rhpro_settings",JSON.stringify(settings));applySettings();status.textContent="✓ Perubahan tersimpan di browser ini."}
+function showPublic(){admin.style.display="none";public.style.display="block";window.scrollTo(0,0)}
+bookingForm.addEventListener("submit",e=>{e.preventDefault();const type=document.querySelector('input[name="type"]:checked').value;const text=`Halo RHPROcarbon Banda Aceh!%0A%0APilihan: ${type==="pribadi"?"CO + Barang Pribadi":"CO + Barang dari Toko"}%0ANama: ${encodeURIComponent(name.value)}%0ANo WA: ${encodeURIComponent(phone.value)}%0ATanggal: ${date.value}%0AJam: ${time.value}%0AKendaraan: ${encodeURIComponent(vehicle.value||"-")}%0ABarang/Bagian: ${encodeURIComponent(item.value||"-")}%0ACatatan: ${encodeURIComponent(notes.value||"-")}`;window.open("https://wa.me/"+String(settings.wa).replace(/\D/g,"")+"?text="+text,"_blank")});
+loadSettings();applySettings();
+</script></body></html>
